@@ -37,6 +37,9 @@
                             <constraint firstItem="Yug-cj-Cgy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lFd-9G-082"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Yug-cj-Cgy" id="qNw-wF-Vz6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

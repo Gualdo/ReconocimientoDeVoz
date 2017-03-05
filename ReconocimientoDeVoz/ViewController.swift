@@ -7,19 +7,53 @@
 //
 
 import UIKit
+import Speech
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    @IBOutlet var textView: UITextView!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        recognizeSpeech()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func recognizeSpeech()
+    {
+        SFSpeechRecognizer.requestAuthorization //dar autorizacion para usar algo del dispositivo
+            { (authStatus) in
+                if authStatus == SFSpeechRecognizerAuthorizationStatus.authorized // Condicion que compruba que el usuario dio la autorizacion
+                {
+                    if let urlPath = Bundle.main.url(forResource: "audio", withExtension: "mp3")
+                    {
+                        let recognizer = SFSpeechRecognizer()
+                        let request = SFSpeechURLRecognitionRequest(url: urlPath)
+                        
+                        recognizer?.recognitionTask(with: request, resultHandler:
+                            { (result, error) in
+                                if let error = error
+                                {
+                                    print("Algo ha ido mal \(error.localizedDescription /*Da una descripcion del error que ha ocurrido*/)")
+                                }
+                                else
+                                {
+                                    self.textView.text = result?.bestTranscription.formattedString // Cambia el resultado a String
+                                }
+                            })
+                    }
+                }
+                else
+                {
+                    print("No tengo permisos para acceder al Speech Framework")
+                }
+            }
+    }
 }
-

@@ -12,6 +12,8 @@
 		2DA56AAB1E6A5878006CF87F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA56AA91E6A5878006CF87F /* Main.storyboard */; };
 		2DA56AAD1E6A5878006CF87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA56AAC1E6A5878006CF87F /* Assets.xcassets */; };
 		2DA56AB01E6A5878006CF87F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA56AAE1E6A5878006CF87F /* LaunchScreen.storyboard */; };
+		2DA56AB91E6A5B8E006CF87F /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA56AB81E6A5B8E006CF87F /* Speech.framework */; };
+		2DA56ABB1E6A6200006CF87F /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2DA56ABA1E6A6200006CF87F /* audio.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2DA56AAC1E6A5878006CF87F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DA56AAF1E6A5878006CF87F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DA56AB11E6A5878006CF87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DA56AB81E6A5B8E006CF87F /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		2DA56ABA1E6A6200006CF87F /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA56AB91E6A5B8E006CF87F /* Speech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				2DA56AA41E6A5878006CF87F /* ReconocimientoDeVoz */,
 				2DA56AA31E6A5878006CF87F /* Products */,
+				2DA56AB71E6A5B8E006CF87F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +60,7 @@
 		2DA56AA41E6A5878006CF87F /* ReconocimientoDeVoz */ = {
 			isa = PBXGroup;
 			children = (
+				2DA56ABA1E6A6200006CF87F /* audio.mp3 */,
 				2DA56AA51E6A5878006CF87F /* AppDelegate.swift */,
 				2DA56AA71E6A5878006CF87F /* ViewController.swift */,
 				2DA56AA91E6A5878006CF87F /* Main.storyboard */,
@@ -62,6 +69,14 @@
 				2DA56AB11E6A5878006CF87F /* Info.plist */,
 			);
 			path = ReconocimientoDeVoz;
+			sourceTree = "<group>";
+		};
+		2DA56AB71E6A5B8E006CF87F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DA56AB81E6A5B8E006CF87F /* Speech.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DA56AB01E6A5878006CF87F /* LaunchScreen.storyboard in Resources */,
+				2DA56ABB1E6A6200006CF87F /* audio.mp3 in Resources */,
 				2DA56AAD1E6A5878006CF87F /* Assets.xcassets in Resources */,
 				2DA56AAB1E6A5878006CF87F /* Main.storyboard in Resources */,
 			);
