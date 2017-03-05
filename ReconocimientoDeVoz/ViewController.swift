@@ -13,6 +13,8 @@ class ViewController: UIViewController
 {
     @IBOutlet var textView: UITextView!
     
+    var audioRecordingSession : AVAudioSession!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -55,5 +57,19 @@ class ViewController: UIViewController
                     print("No tengo permisos para acceder al Speech Framework")
                 }
             }
+    }
+    
+    func recordingAudioSetup()
+    {
+        audioRecordingSession = AVAudioSession.sharedInstance() // Sesion de audio compartida ya que el emicrofono lo usa todas las app
+        
+        do
+        {
+            try audioRecordingSession.setCategory(AVAudioSessionCategoryRecord) // Para grabar audio desde el microfono
+        }
+        catch
+        {
+            print("Ha habido un error al configurar el audio recorder")
+        }
     }
 }
