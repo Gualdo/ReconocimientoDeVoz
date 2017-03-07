@@ -14,6 +14,8 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Hola, queremos analizar un audio de la app nos das permiso? No te hackearemos el movil</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Nos dejas grabar audio de tu microfono para procesarlo?</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
